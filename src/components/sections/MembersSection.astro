@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import MemberCard from "../MemberCard.astro";
+
+interface Props {
+  members: CollectionEntry<"members">[];
+}
+
+const { members } = Astro.props;
+const groups = [
+  ["lead", "Founders & lab leadership"],
+  ["researchers", "Researchers"],
+  ["members", "Team"],
+  ["students", "Students"],
+  ["alumni", "Former members"],
+] as const;
+---
+
+<section class="page" id="members" data-scrollspy-section aria-labelledby="members-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="section-kicker">People</p>
+      <h2 id="members-title">Members</h2>
+      <p>The people behind MADRID Lab.</p>
+    </header>
+    {groups.map(([groupId, label]) => {
+      const groupMembers = members.filter(({ data }) => data.group === groupId);
+      if (groupMembers.length === 0) return null;
+      return (
+        <section class="member-group" aria-labelledby={`member-group-${groupId}`}>
+          <h3 id={`member-group-${groupId}`}>{label}</h3>
+          <div class="members">
+            {groupMembers.map(({ id, data }) => <MemberCard id={id} member={data} />)}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+</section>

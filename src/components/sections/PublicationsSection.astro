@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  publications: CollectionEntry<"publications">[];
+}
+
+const { publications } = Astro.props;
+const years = [...new Set(publications.map(({ data }) => data.year))].sort((a, b) => b - a);
+---
+
+<section class="page" id="publications" data-scrollspy-section aria-labelledby="publications-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="section-kicker">Research output</p>
+      <h2 id="publications-title">Publications</h2>
+      <p>Papers, proceedings and other research output from lab members.</p>
+    </header>
+
+    <div class="filters" id="publicationFilters" role="group" aria-label="Filter publications by year">
+      <button class="chip is-active" type="button" data-filter-year="all" aria-pressed="true">All years</button>
+      {years.map((year) => (
+        <button class="chip" type="button" data-filter-year={year} aria-pressed="false">{year}</button>
+      ))}
+    </div>
+
+    <div id="publicationList">
+      {years.map((year) => (
+        <section class="year-block" data-publication-year={year} aria-labelledby={`publication-year-${year}`}>
+          <h3 id={`publication-year-${year}`}>{year}</h3>
+          {publications.filter(({ data }) => data.year === year).map(({ data }) => (
+            <article class="publication">
+              <h4>{data.title}</h4>
+              <p class="authors">
+                {data.authors}. <span class="venue">{data.venue}</span>, {data.year}.
+              </p>
+              {(data.paper || data.code) && (
+                <div class="publication-links">
+                  {data.paper && <a class="text-link" href={data.paper}>Paper</a>}
+                  {data.code && <a class="text-link" href={data.code}>Code</a>}
+                </div>
+              )}
+            </article>
+          ))}
+        </section>
+      ))}
+    </div>
+  </div>
+</section>

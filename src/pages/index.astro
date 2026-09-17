@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HomeSection from "../components/sections/HomeSection.astro";
+import MembersSection from "../components/sections/MembersSection.astro";
+import PublicationsSection from "../components/sections/PublicationsSection.astro";
+import OpeningsSection from "../components/sections/OpeningsSection.astro";
+import ResearchSection from "../components/sections/ResearchSection.astro";
+import BlogSection from "../components/sections/BlogSection.astro";
+import NewsSection from "../components/sections/NewsSection.astro";
+import { lab } from "../data/site";
+
+const [members, publications, openings, news, posts] = await Promise.all([
+  getCollection("members"),
+  getCollection("publications"),
+  getCollection("openings"),
+  getCollection("news"),
+  getCollection("posts"),
+]);
+
+members.sort((a, b) => a.data.order - b.data.order);
+publications.sort((a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title));
+openings.sort((a, b) => a.data.order - b.data.order);
+news.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  name: lab.name,
+  description: lab.description,
+  email: `mailto:${lab.email}`,
+  url: Astro.site?.toString(),
+  parentOrganization: {
+    "@type": "CollegeOrUniversity",
+    name: "SDU University",
+  },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Abylai Khan Street 1/1",
+    addressLocality: "Kaskelen",
+    postalCode: "040900",
+    addressRegion: "Almaty Region",
+    addressCountry: "KZ",
+  },
+};
+---
+
+<BaseLayout structuredData={structuredData}>
+  <Header />
+  <main id="main" tabindex="-1">
+    <HomeSection news={news} />
+    <MembersSection members={members} />
+    <PublicationsSection publications={publications} />
+    <OpeningsSection openings={openings} />
+    <ResearchSection />
+    <BlogSection posts={posts} />
+    <NewsSection news={news} />
+  </main>
+  <Footer />
+
+</BaseLayout>

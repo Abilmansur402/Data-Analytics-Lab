@@ -1,0 +1,52 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { lab } from "../../data/site";
+
+interface Props {
+  openings: CollectionEntry<"openings">[];
+}
+
+const { openings } = Astro.props;
+const googleFormHref = "https://docs.google.com/forms/d/e/1FAIpQLSe1FvS4GouFqkqJCZ8rrp6sCBhbQDIGCvvqSgQIy7myT-8yTw/viewform";
+const applicationHref = `mailto:${lab.email}?subject=${encodeURIComponent("Application to MADRID Lab")}`;
+---
+
+<section class="page" id="openings" data-scrollspy-section aria-labelledby="openings-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="section-kicker">Join the lab</p>
+      <h2 id="openings-title">Openings</h2>
+      <p>Ways to take part in research at MADRID Lab.</p>
+    </header>
+
+    <div>
+      {openings.map(({ data }) => (
+        <article class="opening">
+          <div>
+            <h3>{data.title}</h3>
+            <span class="kind">{data.kind}</span>
+            <p>{data.text}</p>
+            {data.requirements.length > 0 && (
+              <ul>{data.requirements.map((requirement) => <li>{requirement}</li>)}</ul>
+            )}
+          </div>
+          <a
+            class="btn btn-ghost"
+            href={googleFormHref}
+          >Apply</a>
+        </article>
+      ))}
+    </div>
+
+    <div class="apply-box">
+      <div>
+        <h3>How to apply</h3>
+        <p>
+          Send your CV and a few lines about what you would like to work on.
+          Mention the position in the subject line.
+        </p>
+      </div>
+      <a class="btn btn-primary" href={applicationHref}>Email the lab</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import { lab, navigation, socialLinks } from "../data/site";
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-about">
+        <img src="/images/logo-light.png" width="378" height="139" alt="MADRID Lab" loading="lazy" />
+        <p>{lab.description}</p>
+      </div>
+      <div>
+        <h2>Sections</h2>
+        <ul>
+          {navigation.slice(1).map((item) => (
+            <li><a href={`#${item.id}`}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <address>
+          {lab.address.map((line) => <>{line}<br /></>)}
+        </address>
+        <p class="foot-email"><a href={`mailto:${lab.email}`}>{lab.email}</a></p>
+      </div>
+      {socialLinks.length > 0 && <div>
+        <h2>Profiles</h2>
+        <ul>{socialLinks.map((link) => <li><a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a></li>)}</ul>
+      </div>}
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; {new Date().getFullYear()} MADRID Lab. All rights reserved.</span>
+      <nav aria-label="Footer navigation">
+        <a href="#openings">Join us</a>
+        <a href="#top">Back to top</a>
+      </nav>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hypertension-clinical-dataset-2026",
+    "year": 2026,
+    "title": "Using Machine Learning to Predict Arterial Hypertension From a Clinical Dataset",
+    "authors": "Aisulu Igimbayeva, Adel Kunuspekova, Bakhtiyor Meraliyev",
+    "venue": "2026 18th International Conference on Electronics, Computer, and Computation (ICECCO)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "search-trees-review-2025",
+    "year": 2025,
+    "title": "Search Trees: A Review and Comparative Study",
+    "authors": "Mohammed Alaa Ala’anzy, Aknur Mansurkhan, Meruyert Oshayeva, Alaa F. M. Al-Hadeethi",
+    "venue": "2025 28th International Symposium on Wireless Personal Multimedia Communications (WPMC)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "hr-attrition-analytics-2023",
+    "year": 2023,
+    "title": "Attrition Rate Measuring in Human Resource Analytics Using Machine Learning",
+    "authors": "Meraliyev Bakhtiyor, Karabayeva Aruzhan, Altynbekova Tolganay, Nematov Yelaman",
+    "venue": "Proceedings — 2023 17th International Conference on Electronics, Computer, and Computation (ICECCO)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "ml-human-resource-recruiting-2023",
+    "year": 2023,
+    "title": "Machine Learning as an Effective Tool for Human Resource Management in the Higher Educational Field",
+    "authors": "Meraliyev Bakhtiyor, Alibekova Balzhan, Bekturganova Islana",
+    "venue": "Proceedings — 2023 17th International Conference on Electronics, Computer, and Computation (ICECCO)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "anxiety-success-computer-vision-2021",
+    "year": 2021,
+    "title": "A Computer Vision Supported Investigation on Anxiety-Success Relationship in Educational Processes",
+    "authors": "Bakhtiyor Meraliyev, Kurmangazy Kongratbayev, Marzhan Bekbalanova, Cemil Turan, et al.",
+    "venue": "2021 IEEE International Conference on Smart Information Systems and Technologies (SIST)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "suicide-text-nlp-2021",
+    "year": 2021,
+    "title": "Content Analysis of Extracted Suicide Texts From Social Media Networks Using Natural Language Processing and Machine Learning Techniques",
+    "authors": "Bakhtiyor Meraliyev, Kurmangazy Kongratbayev, Nazerke Sultanova",
+    "venue": "2021 IEEE International Conference on Smart Information Systems and Technologies (SIST)",
+    "paper": null,
+    "code": null
+  },
+  {
+    "id": "forest-fires-australia-2020",
+    "year": 2020,
+    "title": "Applying Machine Learning Models for Predicting Forest Fires in Australia and the Influence of Weather on Their Spread",
+    "authors": "Bakhtiyor Askarovich Meraliyev, Kurmangazy Sakenuly Kongratbayev",
+    "venue": "Proceedings of the 2020 International Young Scholars Workshop",
+    "paper": null,
+    "code": null
+  }
+]

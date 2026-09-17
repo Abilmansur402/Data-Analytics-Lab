@@ -1,0 +1,47 @@
+[
+  {
+    "id": "three-new-members-2026",
+    "date": "2026-09-11",
+    "title": "Three new members join the lab",
+    "text": "We welcome Abilmansur Alibekov, Akbike Zhurymbay and Aruzhan Iliyas to MADRID Lab."
+  },
+  {
+    "id": "website-launch-2026",
+    "date": "2026-09-11",
+    "title": "Our new website is live",
+    "text": "Members, publications, open positions and news are now all in one place."
+  },
+  {
+    "id": "anthropic-misuse-september-2026",
+    "date": "2026-09-10",
+    "title": "Anthropic reports on AI misuse and defensive safeguards",
+    "text": "Anthropic describes detected misuse of Claude, including cyber operations and influence campaigns, and the steps taken to disrupt it. The report highlights why monitoring and safeguards matter as AI capabilities grow.",
+    "category": "world",
+    "source": {
+      "name": "Anthropic",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+    }
+  },
+  {
+    "id": "weathernext-3",
+    "date": "2026-09-03",
+    "title": "WeatherNext 3 brings hourly AI weather forecasts",
+    "text": "Google DeepMind and Google Research introduced a forecasting model that uses live satellite observations, with hourly updates and selected surface variables at 5-kilometer resolution. Applications include renewable energy and local weather prediction.",
+    "category": "world",
+    "source": {
+      "name": "Google DeepMind / Google Research",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/"
+    }
+  },
+  {
+    "id": "gemini-3-8-flash",
+    "date": "2026-09-02",
+    "title": "Google introduces Gemini 3.8 Flash and Flash Cyber",
+    "text": "Google announced new models for coding, reasoning and agent workflows. The specialized Flash Cyber variant focuses on vulnerability detection and patching, with access for trusted defenders through the Fairwind Program.",
+    "category": "world",
+    "source": {
+      "name": "Google",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+    }
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "undergraduate-research-assistant",
+    "title": "Undergraduate research assistant",
+    "kind": "Bachelor's students",
+    "text": "Work alongside lab members on an ongoing project: preparing data, running experiments and writing up results.",
+    "requirements": [
+      "Comfortable with Python",
+      "Basic statistics and linear algebra",
+      "Able to commit a few hours every week"
+    ],
+    "order": 1
+  },
+  {
+    "id": "masters-thesis",
+    "title": "Master's thesis",
+    "kind": "Master's students",
+    "text": "Write your thesis on a topic within one of our research areas, with regular supervision and feedback.",
+    "requirements": [
+      "Background in machine learning or data analysis",
+      "A topic idea, or openness to choose one with us"
+    ],
+    "order": 2
+  },
+  {
+    "id": "open-application",
+    "title": "Open application",
+    "kind": "Anyone",
+    "text": "Don't see a position that fits? Tell us what you would like to work on and how you could contribute.",
+    "requirements": [],
+    "order": 3
+  }
+]

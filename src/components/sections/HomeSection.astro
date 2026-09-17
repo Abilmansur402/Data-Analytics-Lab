@@ -1,0 +1,129 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { researchAreas } from "../../data/site";
+import { formatDate } from "../../utils/format";
+
+interface Props {
+  news: CollectionEntry<"news">[];
+}
+
+const { news } = Astro.props;
+const latestNews = news.filter(({ data }) => data.category === "lab").slice(0, 3);
+---
+
+<section class="page home-page" id="home" data-scrollspy-section>
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">SDU University research laboratory</p>
+          <h1>We turn data into decisions.</h1>
+          <p class="lead">
+            MADRID Lab is a university research group working on machine learning,
+            analytics and data research, with one goal: methods that help people
+            make better, well-grounded decisions.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#research">Explore our research</a>
+            <a class="btn btn-ghost" href="#members">Meet the team</a>
+          </div>
+        </div>
+        <ol class="acronym" aria-label="What MADRID stands for">
+          <li><span class="ini">M</span><span class="rest">achine learning</span></li>
+          <li><span class="ini">A</span><span class="rest">nalytics</span></li>
+          <li><span class="ini">D</span><span class="rest">ata</span></li>
+          <li><span class="ini">R</span><span class="rest">esearch</span></li>
+          <li><span class="ini">I</span><span class="rest">ntelligent</span></li>
+          <li><span class="ini">D</span><span class="rest">ecisions</span></li>
+        </ol>
+      </div>
+
+      <figure class="hero-photo">
+        <img
+          src="/images/hero-team-1920.webp"
+          srcset="/images/hero-team-960.webp 960w, /images/hero-team-1920.webp 1920w"
+          sizes="(max-width: 720px) calc(100vw - 40px), (max-width: 1180px) calc(100vw - 56px), 1124px"
+          width="1920"
+          height="1080"
+          alt="MADRID Lab members gathered with certificates at SDU University"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <figcaption>
+          <span>MADRID Lab team</span>
+          <span>SDU University</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="content-section about">
+    <div class="wrap">
+      <div class="about-grid">
+        <h2 class="h2">About the lab</h2>
+        <div class="body-copy">
+          <p>
+            We bring together students and researchers who want to work on real
+            data problems: building models, testing them honestly, and
+            understanding when their results can be trusted.
+          </p>
+          <p class="muted">
+            Our work spans four connected areas, from learning algorithms to the
+            decisions they support. Students join us for research projects,
+            theses and internships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="wrap">
+      <div class="row-head">
+        <h2 class="h2">Research areas</h2>
+        <a class="text-link" href="#research">All research</a>
+      </div>
+      <div class="areas">
+        {researchAreas.map((area) => (
+          <article class="area">
+            <div class="letters" aria-hidden="true">{area.letters}</div>
+            <h3>{area.title}</h3>
+            <p>{area.short}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {latestNews.length > 0 && (
+    <div class="content-section">
+      <div class="wrap">
+        <div class="row-head">
+          <h2 class="h2">Latest news</h2>
+          <a class="text-link" href="#news">All news</a>
+        </div>
+        <ul class="news-list">
+          {latestNews.map(({ data }) => (
+            <li class="news-item">
+              <time datetime={data.date.toISOString().slice(0, 10)}>{formatDate(data.date)}</time>
+              <div><h3>{data.title}</h3><p>{data.text}</p></div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )}
+
+  <div class="content-section join-band">
+    <div class="wrap join">
+      <div>
+        <h2>Want to do research with us?</h2>
+        <p>
+          We regularly take on students for research projects and theses. See
+          what is open right now.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="#openings">See openings</a>
+    </div>
+  </div>
+</section>

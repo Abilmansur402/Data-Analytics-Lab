@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { initials } from "../utils/format";
+
+interface Props {
+  member: CollectionEntry<"members">["data"];
+  id: string;
+}
+
+const { member, id } = Astro.props;
+const availablePhotos = import.meta.glob("/public/images/members/*.{webp,avif,jpg,jpeg,png}", { query: "?url", import: "default" });
+const photo = member.photo ?? ["webp", "avif", "jpg", "jpeg", "png"]
+  .map((extension) => `/images/members/${id}.${extension}`)
+  .find((path) => `/public${path}` in availablePhotos);
+const statusLabels = {
+  founder: "Founder",
+  new: "New member",
+  current: "Current member",
+  former: "Ex member",
+} as const;
+---
+
+<article class="member">
+  <div class:list={["avatar", { "has-photo": Boolean(photo) }]}>
+    <span class="init" aria-hidden="true">{initials(member.name)}</span>
+    {photo && (
+      <img
+        src={photo}
+        width="600"
+        height="600"
+        alt={member.name}
+        loading="lazy"
+        decoding="async"
+      />
+    )}
+  </div>
+  <h4>{member.name}</h4>
+  {member.role && <p class="role">{member.role}</p>}
+  {(member.status || member.linkedin || member.email) && (
+    <div class="member-meta">
+      <span class:list={["badge", `badge-${member.status}`]}>{statusLabels[member.status]}</span>
+      {member.email && <a class="linkedin-link" href={`mailto:${member.email}`} aria-label={`Email ${member.name}`}>Email</a>}
+      {member.linkedin && (
+        <a
+          class="linkedin-link"
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${member.name} on LinkedIn`}
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="5" cy="5" r="2.2" />
+            <rect x="3" y="9" width="4" height="12" rx=".5" />
+            <path d="M10 9h3.8v1.7c.6-1 1.9-2 3.9-2 3.2 0 4.3 2 4.3 5.2V21h-4v-6.3c0-1.5-.3-2.7-1.9-2.7s-2.1 1.2-2.1 2.7V21h-4z" />
+          </svg>
+          LinkedIn
+        </a>
+      )}
+    </div>
+  )}
+</article>

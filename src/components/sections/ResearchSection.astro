@@ -1,0 +1,25 @@
+---
+import { researchAreas } from "../../data/site";
+---
+
+<section class="page" id="research" data-scrollspy-section aria-labelledby="research-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="section-kicker">What we study</p>
+      <h2 id="research-title">Research</h2>
+      <p>Four areas, one direction: from data to decisions you can rely on.</p>
+    </header>
+    <div class="research-list">
+      {researchAreas.map((area) => (
+        <article class="research-item">
+          <div><span class="letters" aria-hidden="true">{area.letters}</span></div>
+          <div>
+            <h3>{area.title}</h3>
+            <p>{area.long}</p>
+            <ul class="tags">{area.tags.map((tag) => <li>{tag}</li>)}</ul>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
