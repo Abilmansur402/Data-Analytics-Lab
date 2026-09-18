@@ -2,7 +2,7 @@
   {
     "id": "bakhtiyor-meraliyev",
     "name": "Bakhtiyor Meraliyev",
-    "role": "Professor, Head of MADRID Lab",
+    "role": "Professor",
     "group": "lead",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/bakhtiyor-meraliyev/",
@@ -13,7 +13,7 @@
   {
     "id": "aziza-nazarbayeva",
     "name": "Aziza Nazarbayeva",
-    "role": "Lab Supervisor",
+    "role": "Head of MADRID Lab",
     "group": "lead",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/aziza-nazarbayeva-169b98289/",
@@ -28,7 +28,7 @@
     "group": "members",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/alibekov19/",
-    "order": 3,
+    "order": 7,
     "email": null,
     "status": "new"
   },
@@ -39,7 +39,7 @@
     "group": "members",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/akbike-zhurymbay-25b73630a/",
-    "order": 4,
+    "order": 8,
     "email": null,
     "status": "new"
   },
@@ -50,7 +50,7 @@
     "group": "members",
     "photo": null,
     "linkedin": null,
-    "order": 5,
+    "order": 9,
     "email": null,
     "status": "new"
   },
@@ -61,7 +61,7 @@
     "group": "members",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/aisigim/",
-    "order": 6,
+    "order": 5,
     "email": null,
     "status": "current"
   },
@@ -72,7 +72,7 @@
     "group": "members",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/aknur-m-ba809a330/",
-    "order": 7,
+    "order": 6,
     "email": null,
     "status": "current"
   },
@@ -83,28 +83,28 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/nurdaulet-s-8658372a6/",
-    "order": 8,
+    "order": 10,
     "status": "former"
   },
   {
     "id": "meruet-salizhanova",
     "name": "Салижанова Мерует",
     "role": "",
-    "group": "alumni",
+    "group": "lead",
     "photo": null,
     "linkedin": null,
-    "order": 9,
-    "status": "former"
+    "order": 3,
+    "status": "founder"
   },
   {
     "id": "zhanserik-sauatbek",
     "name": "Сауатбек Жансерік",
     "role": "",
-    "group": "alumni",
+    "group": "lead",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/zhanserik-sauatbek-07aa5b289/",
-    "order": 10,
-    "status": "former"
+    "order": 4,
+    "status": "founder"
   },
   {
     "id": "zhasulan-tursynbai",
