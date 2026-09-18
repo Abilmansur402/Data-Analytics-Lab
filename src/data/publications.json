@@ -6,7 +6,8 @@
     "authors": "Aisulu Igimbayeva, Adel Kunuspekova, Bakhtiyor Meraliyev",
     "venue": "2026 18th International Conference on Electronics, Computer, and Computation (ICECCO)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["clinical-prediction"]
   },
   {
     "id": "search-trees-review-2025",
@@ -15,7 +16,8 @@
     "authors": "Mohammed Alaa Ala’anzy, Aknur Mansurkhan, Meruyert Oshayeva, Alaa F. M. Al-Hadeethi",
     "venue": "2025 28th International Symposium on Wireless Personal Multimedia Communications (WPMC)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["algorithms-data-structures"]
   },
   {
     "id": "hr-attrition-analytics-2023",
@@ -24,7 +26,8 @@
     "authors": "Meraliyev Bakhtiyor, Karabayeva Aruzhan, Altynbekova Tolganay, Nematov Yelaman",
     "venue": "Proceedings — 2023 17th International Conference on Electronics, Computer, and Computation (ICECCO)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["people-hr-analytics"]
   },
   {
     "id": "ml-human-resource-recruiting-2023",
@@ -33,7 +36,8 @@
     "authors": "Meraliyev Bakhtiyor, Alibekova Balzhan, Bekturganova Islana",
     "venue": "Proceedings — 2023 17th International Conference on Electronics, Computer, and Computation (ICECCO)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["people-hr-analytics"]
   },
   {
     "id": "anxiety-success-computer-vision-2021",
@@ -42,7 +46,8 @@
     "authors": "Bakhtiyor Meraliyev, Kurmangazy Kongratbayev, Marzhan Bekbalanova, Cemil Turan, et al.",
     "venue": "2021 IEEE International Conference on Smart Information Systems and Technologies (SIST)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["computer-vision", "learning-analytics"]
   },
   {
     "id": "suicide-text-nlp-2021",
@@ -51,7 +56,8 @@
     "authors": "Bakhtiyor Meraliyev, Kurmangazy Kongratbayev, Nazerke Sultanova",
     "venue": "2021 IEEE International Conference on Smart Information Systems and Technologies (SIST)",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["nlp-text-analysis"]
   },
   {
     "id": "forest-fires-australia-2020",
@@ -60,6 +66,7 @@
     "authors": "Bakhtiyor Askarovich Meraliyev, Kurmangazy Sakenuly Kongratbayev",
     "venue": "Proceedings of the 2020 International Young Scholars Workshop",
     "paper": null,
-    "code": null
+    "code": null,
+    "topics": ["environmental-modelling"]
   }
 ]

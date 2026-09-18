@@ -83,27 +83,27 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/nurdaulet-s-8658372a6/",
-    "order": 10,
+    "order": 17,
     "status": "former"
   },
   {
     "id": "meruet-salizhanova",
-    "name": "Салижанова Мерует",
+    "name": "Мерует Салижанова",
     "role": "",
     "group": "lead",
     "photo": null,
     "linkedin": null,
-    "order": 3,
+    "order": 4,
     "status": "founder"
   },
   {
     "id": "zhanserik-sauatbek",
-    "name": "Сауатбек Жансерік",
+    "name": "Жансерік Сауатбек",
     "role": "",
     "group": "lead",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/zhanserik-sauatbek-07aa5b289/",
-    "order": 4,
+    "order": 3,
     "status": "founder"
   },
   {
@@ -113,17 +113,7 @@
     "group": "alumni",
     "photo": null,
     "linkedin": null,
-    "order": 11,
-    "status": "former"
-  },
-  {
-    "id": "arailym-azatkyzy",
-    "name": "Арайлым Азатқызы",
-    "role": "",
-    "group": "alumni",
-    "photo": null,
-    "linkedin": "https://www.linkedin.com/in/arailym-azatkyzy-5866643ab/",
-    "order": 12,
+    "order": 18,
     "status": "former"
   },
   {
@@ -133,17 +123,17 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/adel-kunuspekova-93585a3b6/",
-    "order": 13,
+    "order": 16,
     "status": "former"
   },
   {
     "id": "aisha-amirkyzy",
-    "name": "Амирқызы Айша",
+    "name": "Айша Амирқызы",
     "role": "",
     "group": "alumni",
     "photo": null,
     "linkedin": null,
-    "order": 14,
+    "order": 15,
     "status": "former"
   },
   {
@@ -153,7 +143,7 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/alina-kenzhegariyeva-105523336/",
-    "order": 15,
+    "order": 13,
     "status": "former"
   },
   {
@@ -163,47 +153,17 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/azhar-kenzhebek-0456942a9/",
-    "order": 16,
-    "status": "former"
-  },
-  {
-    "id": "aziz-sarsenbaev",
-    "name": "Азиз Сарсенбаев",
-    "role": "",
-    "group": "alumni",
-    "photo": null,
-    "linkedin": "https://www.linkedin.com/in/sarsenbayevaziz/",
-    "order": 17,
-    "status": "former"
-  },
-  {
-    "id": "aibibi-oraz",
-    "name": "Айбибі Ораз",
-    "role": "",
-    "group": "alumni",
-    "photo": null,
-    "linkedin": "https://www.linkedin.com/in/aibibi-oraz-5301a9336/",
-    "order": 18,
-    "status": "former"
-  },
-  {
-    "id": "kamila-yakiya",
-    "name": "Якия Камиля",
-    "role": "",
-    "group": "alumni",
-    "photo": null,
-    "linkedin": "https://www.linkedin.com/in/kamilya-yakiya/",
-    "order": 19,
+    "order": 12,
     "status": "former"
   },
   {
     "id": "alikhan-koshamet",
-    "name": "Қошамет Әлихан",
+    "name": "Әлихан Қошамет",
     "role": "",
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/alikkosh/",
-    "order": 20,
+    "order": 11,
     "status": "former"
   },
   {
@@ -213,7 +173,7 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/leilima-akat/",
-    "order": 21,
+    "order": 14,
     "status": "former"
   },
   {
@@ -223,7 +183,7 @@
     "group": "alumni",
     "photo": null,
     "linkedin": "https://www.linkedin.com/in/akbota-amangeldiyeva-357505335/",
-    "order": 22,
+    "order": 10,
     "status": "former"
   }
 ]

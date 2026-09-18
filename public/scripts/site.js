@@ -37,22 +37,74 @@
 
   const filterGroup = document.querySelector("#publicationFilters");
   const yearBlocks = [...document.querySelectorAll("[data-publication-year]")];
+  const publications = [...document.querySelectorAll("[data-publication-topics]")];
+  const topicButtons = [...document.querySelectorAll("[data-topic-filter]")];
+  const topicStatus = document.querySelector("#topicFilterStatus");
+  const topicLabel = document.querySelector("#activeTopicLabel");
+  const clearTopicButton = document.querySelector("[data-clear-topic]");
+  const emptyState = document.querySelector("#publicationEmpty");
+  let selectedYear = "all";
+  let selectedTopic = "all";
+
+  const setYear = (year) => {
+    selectedYear = year;
+    filterGroup?.querySelectorAll("[data-filter-year]").forEach((item) => {
+      const active = item.dataset.filterYear === year;
+      item.classList.toggle("is-active", active);
+      item.setAttribute("aria-pressed", String(active));
+    });
+  };
+
+  const updatePublicationVisibility = () => {
+    let visibleCount = 0;
+    publications.forEach((publication) => {
+      const yearBlock = publication.closest("[data-publication-year]");
+      const matchesYear = selectedYear === "all" || yearBlock?.dataset.publicationYear === selectedYear;
+      const topics = publication.dataset.publicationTopics?.split(" ") ?? [];
+      const matchesTopic = selectedTopic === "all" || topics.includes(selectedTopic);
+      publication.hidden = !(matchesYear && matchesTopic);
+      if (!publication.hidden) visibleCount += 1;
+    });
+
+    yearBlocks.forEach((block) => {
+      block.hidden = !block.querySelector("[data-publication-topics]:not([hidden])");
+    });
+    if (emptyState instanceof HTMLElement) emptyState.hidden = visibleCount > 0;
+  };
 
   filterGroup?.addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) return;
     const button = event.target.closest("[data-filter-year]");
     if (!(button instanceof HTMLButtonElement)) return;
 
-    const selectedYear = button.dataset.filterYear;
-    filterGroup.querySelectorAll("[data-filter-year]").forEach((item) => {
-      const active = item === button;
-      item.classList.toggle("is-active", active);
-      item.setAttribute("aria-pressed", String(active));
-    });
+    setYear(button.dataset.filterYear ?? "all");
+    updatePublicationVisibility();
+  });
 
-    yearBlocks.forEach((block) => {
-      block.hidden = selectedYear !== "all" && block.dataset.publicationYear !== selectedYear;
+  topicButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedTopic = button.dataset.topicFilter ?? "all";
+      setYear("all");
+      topicButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      if (topicLabel) topicLabel.textContent = button.dataset.topicLabel ?? "";
+      if (topicStatus instanceof HTMLElement) topicStatus.hidden = false;
+      updatePublicationVisibility();
+      document.querySelector("#publications")?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+  });
+
+  clearTopicButton?.addEventListener("click", () => {
+    selectedTopic = "all";
+    topicButtons.forEach((item) => {
+      item.classList.remove("is-active");
+      item.setAttribute("aria-pressed", "false");
+    });
+    if (topicStatus instanceof HTMLElement) topicStatus.hidden = true;
+    updatePublicationVisibility();
   });
 
   const navLinks = [...document.querySelectorAll("#mainNav [data-section]")];

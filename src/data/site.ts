@@ -22,9 +22,9 @@ export const lab = {
 export const navigation = [
   { id: "home", label: "Home" },
   { id: "members", label: "Members" },
+  { id: "research", label: "Research" },
   { id: "publications", label: "Publications" },
   { id: "openings", label: "Openings" },
-  { id: "research", label: "Research" },
   { id: "blog", label: "Blog" },
   { id: "news", label: "News" },
 ] as const;

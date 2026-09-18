@@ -1,6 +1,7 @@
 import { defineCollection } from "astro:content";
 import { file } from "astro/loaders";
 import { z } from "astro/zod";
+import { researchTopicIds } from "./data/research-topics";
 
 const httpsUrl = z.url().refine((value) => new URL(value).protocol === "https:", {
   message: "URL must use HTTPS",
@@ -37,6 +38,7 @@ const publications = defineCollection({
     venue: z.string(),
     paper: httpsUrl.nullable().optional(),
     code: httpsUrl.nullable().optional(),
+    topics: z.array(z.enum(researchTopicIds)).min(1),
   }),
 });
 

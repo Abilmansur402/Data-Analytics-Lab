@@ -12,17 +12,6 @@
     "order": 1
   },
   {
-    "id": "masters-thesis",
-    "title": "Master's thesis",
-    "kind": "Master's students",
-    "text": "Write your thesis on a topic within one of our research areas, with regular supervision and feedback.",
-    "requirements": [
-      "Background in machine learning or data analysis",
-      "A topic idea, or openness to choose one with us"
-    ],
-    "order": 2
-  },
-  {
     "id": "open-application",
     "title": "Open application",
     "kind": "Anyone",

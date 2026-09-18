@@ -1,25 +1,46 @@
 ---
-import { researchAreas } from "../../data/site";
+import type { CollectionEntry } from "astro:content";
+import TopicIcon from "../TopicIcon.astro";
+import { researchTopics } from "../../data/research-topics";
+
+interface Props {
+  publications: CollectionEntry<"publications">[];
+}
+
+const { publications } = Astro.props;
 ---
 
 <section class="page" id="research" data-scrollspy-section aria-labelledby="research-title">
   <div class="wrap">
     <header class="section-head">
-      <p class="section-kicker">What we study</p>
-      <h2 id="research-title">Research</h2>
-      <p>Four areas, one direction: from data to decisions you can rely on.</p>
+      <p class="section-kicker">Explore our work</p>
+      <h2 id="research-title">Research topics</h2>
+      <p>Select a topic to see the publications connected to it.</p>
     </header>
-    <div class="research-list">
-      {researchAreas.map((area) => (
-        <article class="research-item">
-          <div><span class="letters" aria-hidden="true">{area.letters}</span></div>
-          <div>
-            <h3>{area.title}</h3>
-            <p>{area.long}</p>
-            <ul class="tags">{area.tags.map((tag) => <li>{tag}</li>)}</ul>
-          </div>
-        </article>
-      ))}
+    <div class="research-topics" aria-label="Research topics">
+      {researchTopics.map((topic) => {
+        const publicationCount = publications.filter(({ data }) => data.topics.includes(topic.id)).length;
+        return (
+          <button
+            class="research-topic"
+            type="button"
+            data-topic-filter={topic.id}
+            data-topic-label={topic.title}
+            aria-pressed="false"
+            aria-label={`Show ${publicationCount} ${publicationCount === 1 ? "publication" : "publications"} about ${topic.title}`}
+          >
+            <span class="topic-icon"><TopicIcon name={topic.icon} /></span>
+            <span class="topic-copy">
+              <span class="topic-title">{topic.title}</span>
+              <span class="topic-description">{topic.description}</span>
+              <span class="topic-count">
+                {publicationCount} {publicationCount === 1 ? "publication" : "publications"}
+                <span aria-hidden="true">→</span>
+              </span>
+            </span>
+          </button>
+        );
+      })}
     </div>
   </div>
 </section>

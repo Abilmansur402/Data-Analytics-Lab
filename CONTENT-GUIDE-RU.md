@@ -14,19 +14,15 @@
 | Aisulu Igimbayeva | `aisulu-igimbayeva.webp` |
 | Aknur Mansurkhan | `aknur-mansurkhan.webp` |
 | Akbota Amangeldiyeva | `akbota-amangeldiyeva.webp` |
+| Әлихан Қошамет | `alikhan-koshamet.webp` |
 | Нұрдәулет Серкетай | `nurdaulet-serketai.webp` |
-| Салижанова Мерует | `meruet-salizhanova.webp` |
-| Сауатбек Жансерік | `zhanserik-sauatbek.webp` |
+| Мерует Салижанова | `meruet-salizhanova.webp` |
+| Жансерік Сауатбек | `zhanserik-sauatbek.webp` |
 | Жасұлан Тұрсынбай | `zhasulan-tursynbai.webp` |
-| Арайлым Азатқызы | `arailym-azatkyzy.webp` |
 | Адель Кунуспекова | `adel-kunuspekova.webp` |
-| Амирқызы Айша | `aisha-amirkyzy.webp` |
+| Айша Амирқызы | `aisha-amirkyzy.webp` |
 | Алина Кенжегариева | `alina-kenzhegarieva.webp` |
 | Ажар Кенжебек | `azhar-kenzhebek.webp` |
-| Азиз Сарсенбаев | `aziz-sarsenbaev.webp` |
-| Айбибі Ораз | `aibibi-oraz.webp` |
-| Якия Камиля | `kamila-yakiya.webp` |
-| Қошамет Әлихан | `alikhan-koshamet.webp` |
 | Лейлима Ақат | `leilima-akat.webp` |
 
 Поддерживаются также `.avif`, `.jpg`, `.jpeg`, `.png` (имена и расширения строчными буквами). Если несколько файлов одного участника, приоритет: WebP, AVIF, JPG, JPEG, PNG. Рекомендуется квадрат 800×800 пикселей, лицо в центре, небольшой запас над головой, размер до 200 КБ. Карточки квадратные: неквадратные фото обрезаются по центру.
